@@ -72,6 +72,14 @@
     }
   }
 
+  &__list{
+    display: none;
+
+    @include phones{
+      display: block;
+    }
+  }
+
   &__item{
     border-bottom: 1px dotted #8a8a8a;
     padding: 10px 0;
