@@ -1,0 +1,81 @@
+.advant{
+
+  @include phones{
+    display: none;
+  }
+
+  &__wrap{
+    background-color: #fff;
+    //box-shadow: 1px 1px 1px 0 rgba(221, 221, 221, 1);
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+    padding: 60px;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__row{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item{
+    margin-top: 50px;
+    margin-left: 75px;
+    position: relative;
+
+    &--free:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/free.png);
+      width: 52px;
+      height: 52px;
+      left: -70px;
+      top: 0;
+    }
+
+    &--time:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/time.png);
+      width: 52px;
+      height: 52px;
+      left: -70px;
+      top: -20px;
+    }
+
+    &--care:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/care.png);
+      width: 52px;
+      height: 52px;
+      left: -70px;
+      top: 0;
+    }
+
+    &--city:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/city.png);
+      width: 52px;
+      height: 52px;
+      left: -70px;
+      top: 0;
+    }
+  }
+
+  &__descr{
+    font-size: 14px;
+    color: #000;
+    font-family: 'helvlight';
+    line-height: 21px;
+  }
+}

@@ -1,0 +1,229 @@
+.header{
+  background-color: #06264b;
+  background: linear-gradient(to bottom, #06264b 0%, #021325 50%);
+
+  &__login-block{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+
+    @include phones{
+      display: none;
+    }
+  }
+
+  &__phone{
+    display: none;
+
+    @include phones{
+      display: block;
+      background-color: #f6f6f6;
+      text-align: right;
+      padding: 10px;
+    }
+  }
+
+  &__phone-link{
+    font-size: 11px;
+    color: #494949;
+    font-family: 'helvlight';
+  }
+  
+  &__logo-block{
+    background-color: #fff;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phones{
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      //justify-content: center;
+      padding: 5px;
+    }
+  }
+}
+
+.favor{
+  display: flex;
+  margin-right: 115px;
+
+  &__stars{
+    position: relative;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+}
+
+.amount{
+  color: #fff;
+  font-size: 11px;
+  font-family: 'avenirlight';
+  position: absolute;
+  background-color: #ed2126;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  top: 0;
+  right: -18px;
+
+  &--login{
+    right: -30px;
+  }
+}
+
+.login{
+  margin-right: 45px;
+  position: relative;
+
+  &__link{
+    color: #fff;
+    font-family: 'helvlight';
+    font-size: 13px;
+  }
+}
+
+.humb{
+  display: none;
+
+  @include phones{
+    display: block;
+  }
+
+  &__button{
+    background-image: url(../img/humb.png);
+    width: 19px;
+    height: 15px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__list{
+    display: none;
+    margin-left: 35px;
+    margin-top: -20px;
+  }
+
+  &__link{
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'helvlight';
+    color: #010101;
+  }
+}
+
+.humb:hover .humb__list{
+  display: block;
+  z-index: 3;
+}
+
+.logo{
+
+  &__img{
+
+    @include phones{
+      width: 140px;
+      padding-top: 5px;
+    }
+  }
+}
+
+.cart{
+  display: none;
+
+  @include phones{
+    display: block;
+    margin-right: 10px;
+  }
+
+  &__link{
+    position: relative;
+    background-image: url(../img/cart-dark.png);
+    width: 33px;
+    height: 26px;
+    display: block;
+  }
+}
+
+.contacts{
+  display: flex;
+  font-size: 13px;
+  font-family: 'helvlight';
+  color: #010c2c;
+
+  @include phones{
+    display: none;
+  }
+
+  &__item{
+    padding: 11px 30px 11px 60px;
+    position: relative;
+    border-right: 1px solid #d9d9d9;
+
+    &:last-child{
+      padding-right: 0;
+      border-right: none;
+    }
+
+    &--phone{
+      font-family: 'avenirdemi';
+    }
+
+    &--region:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/map-marker.png);
+      width: 18px;
+      height: 26px;
+      top: 15px;
+      left: 25px;
+    }
+
+    &--phone:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/phone.png);
+      width: 16px;
+      height: 26px;
+      top: 15px;
+      left: 25px;
+    }
+
+    &--cart:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/cart.png);
+      width: 33px;
+      height: 26px;
+      top: 15px;
+      left: 15px;
+    }
+  }
+  
+  &__link{
+    color: #010c2c;
+    
+    &--red{
+      color: #ee3136;
+      font-family: 'avenirdemi';
+    }
+  }
+
+  &__order{
+    color: #010c2c;
+    text-decoration: none;
+    font-family: 'helvlight';
+  }
+}

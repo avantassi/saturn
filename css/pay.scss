@@ -1,0 +1,60 @@
+.pay{
+
+  @include phones{
+    display: none;
+  }
+
+  &__wrap{
+    background-color: #fff;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding-bottom: 80px;
+  }
+
+  &__bg{
+    position: absolute;
+    width: 963px;
+    height: 475px;
+    background: url(../img/pay-bg.png) center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+
+  &__img-wrap{
+    z-index: 1;
+  }
+
+  &__text-wrap{
+    z-index: 1;
+    margin-top: 100px;
+    margin-right: 80px;
+    margin-left: -45px;
+
+    @include phones{
+      margin: 0;
+    }
+  }
+}
+
+.order{
+  margin-top: 30px;
+  background-color: #ed1a23;
+  padding: 20px 45px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'helvmedium';
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #eb0208;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.43);
+  cursor: pointer;
+
+  @include phones{
+    font-size: 14px;
+    text-transform: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+}
